@@ -81,9 +81,9 @@ export function BlogPost({ post }: BlogPostProps) {
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
-                  code: ({ node, inline, className, children, ...props }) => {
+                  code: ({ className, children, ...props }) => {
                     const match = /language-(\w+)/.exec(className || "");
-                    return !inline && match ? (
+                    return match ? (
                       <SyntaxHighlighter
                         style={nord}
                         language={match[1]}
