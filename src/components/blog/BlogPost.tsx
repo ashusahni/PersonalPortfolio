@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { BlogPostType } from "@/data/blog-posts";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown, { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nord } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -81,13 +81,7 @@ export function BlogPost({ post }: BlogPostProps) {
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
-                  code({ node, inline, className, children, ...props }: {
-                    node?: any;
-                    inline?: boolean;
-                    className?: string;
-                    children: React.ReactNode;
-                    [key: string]: any;
-                  }) {
+                  code: ({ node, inline, className, children, ...props }) => {
                     const match = /language-(\w+)/.exec(className || "");
                     return !inline && match ? (
                       <SyntaxHighlighter
@@ -104,7 +98,7 @@ export function BlogPost({ post }: BlogPostProps) {
                       </code>
                     );
                   },
-                }}
+                } as Components}
               >
                 {post.content}
               </ReactMarkdown>
