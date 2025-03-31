@@ -8,9 +8,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { BlogPostType } from "@/data/blog-posts";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { /* your preferred style, e.g., */ prism } from 'react-syntax-highlighter/dist/esm/styles/prism';
-// Import a markdown rendering library
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";

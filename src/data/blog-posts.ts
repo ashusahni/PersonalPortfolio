@@ -25,8 +25,7 @@ export const blogPosts: BlogPostType[] = [
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&crop=faces&fit=crop&q=80"
     },
     excerpt: "Learn how to create a high-performance web application using Next.js and Tailwind CSS, with a focus on best practices and modern development techniques.",
-    content: `
-# Building a Modern Web Application with Next.js and Tailwind CSS
+    content: `# Building a Modern Web Application with Next.js and Tailwind CSS
 
 Next.js has emerged as one of the most powerful React frameworks for building modern web applications. Combined with the utility-first approach of Tailwind CSS, developers can create stunning, high-performance websites with exceptional developer experience.
 
@@ -48,62 +47,101 @@ Tailwind CSS has revolutionized how we approach styling in web applications:
 - **Highly customizable** design system
 - **Small production bundles** with PurgeCSS integration
 - **Responsive design** made simple
-- **Dark mode** support
 
-## Setting Up Your Project
+## Getting Started
 
-First, create a new Next.js project with Tailwind CSS:
-
-\`\`\`bash
-npx create-next-app my-project --typescript
-cd my-project
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-\`\`\`
-
-Configure your tailwind.config.js:
-
-\`\`\`js
-module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-\`\`\`
-
-## Building Components
-
-With Next.js and Tailwind CSS set up, you can start building components:
+Here's a simple example of how to create a component with Next.js and Tailwind CSS:
 
 \`\`\`jsx
-// components/Button.tsx
-export default function Button({ children, onClick }) {
+import Image from 'next/image';
+
+export default function HeroSection() {
   return (
-    <button
-      onClick={onClick}
-      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
-    >
-      {children}
-    </button>
+    <section className="relative min-h-screen flex items-center justify-center">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl md:text-6xl font-bold text-center">
+          Welcome to My App
+        </h1>
+        <p className="mt-6 text-xl text-center text-gray-600">
+          Built with Next.js and Tailwind CSS
+        </p>
+      </div>
+    </section>
   );
 }
 \`\`\`
 
 ## Conclusion
 
-Next.js and Tailwind CSS form a powerful combination for modern web development. By leveraging the strengths of both technologies, you can build fast, responsive, and visually appealing web applications with an excellent developer experience.
-    `,
-    tags: ["Next.js", "Tailwind CSS", "React", "Web Development"],
-    coverImage: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=1200&h=630&fit=crop&q=80",
-    readingTime: "8 min read"
+Next.js and Tailwind CSS are a powerful combination for building modern web applications. They provide a great developer experience while delivering excellent performance and maintainability.`,
+    tags: ["Next.js", "React", "Tailwind CSS", "Web Development"],
+    coverImage: "https://images.unsplash.com/photo-1461749280684-dccba630ec2f?w=1200&h=600&fit=crop",
+    readingTime: "5 min read"
   },
   {
     id: 2,
+    title: "Building a RESTful API with Node.js and Express",
+    slug: "building-restful-api-nodejs-express",
+    date: "2024-03-10",
+    author: {
+      name: "John Smith",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&crop=faces&fit=crop&q=80"
+    },
+    excerpt: "Learn how to create a robust RESTful API using Node.js, Express, and MongoDB. This guide covers best practices, error handling, and authentication.",
+    content: `# Building a RESTful API with Node.js and Express
+
+Node.js and Express are a popular combination for building RESTful APIs. In this guide, we'll explore how to create a robust API with proper error handling, authentication, and database integration.
+
+## Project Setup
+
+First, let's set up our project structure:
+
+\`\`\`bash
+mkdir my-api
+cd my-api
+npm init -y
+npm install express mongoose dotenv cors helmet morgan
+\`\`\`
+
+## Basic Server Setup
+
+Here's a basic Express server setup:
+
+\`\`\`javascript
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
+
+const app = express();
+
+// Middleware
+app.use(cors());
+app.use(helmet());
+app.use(morgan('dev'));
+app.use(express.json());
+
+// Routes
+app.use('/api/users', userRoutes);
+
+// Error handling
+app.use(errorHandler);
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(\`Server running on port \${PORT}\`);
+});
+\`\`\`
+
+## Conclusion
+
+You now have a solid foundation for a Node.js REST API with Express and MongoDB. This architecture is scalable, maintainable, and follows best practices for production applications.`,
+    tags: ["Node.js", "Express", "MongoDB", "API", "Backend"],
+    coverImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=600&fit=crop",
+    readingTime: "8 min read"
+  },
+  {
+    id: 3,
     title: "Understanding React Server Components in Next.js 13",
     slug: "understanding-react-server-components-nextjs-13",
     date: "2024-02-22",
@@ -207,249 +245,6 @@ React Server Components in Next.js 13 provide a powerful new way to build perfor
     tags: ["React", "Next.js", "Server Components", "Web Development"],
     coverImage: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=1200&h=630&fit=crop&q=80",
     readingTime: "10 min read"
-  },
-  {
-    id: 3,
-    title: "Build a REST API with Node.js, Express, and MongoDB",
-    slug: "build-rest-api-nodejs-express-mongodb",
-    date: "2024-01-18",
-    author: {
-      name: "Jane Developer",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&crop=faces&fit=crop&q=80"
-    },
-    excerpt: "A comprehensive guide to building a RESTful API from scratch using Node.js, Express, and MongoDB with best practices for production deployment.",
-    content: `
-# Build a REST API with Node.js, Express, and MongoDB
-
-Creating a robust RESTful API is a fundamental skill for backend developers. This guide will walk you through building a production-ready API using Node.js, Express, and MongoDB.
-
-## Setting Up Your Project
-
-First, initialize your project and install the necessary dependencies:
-
-\`\`\`bash
-mkdir api-project
-cd api-project
-npm init -y
-npm install express mongoose dotenv cors helmet morgan
-npm install --save-dev nodemon typescript @types/express @types/node
-\`\`\`
-
-## Project Structure
-
-A well-organized project structure improves maintainability:
-
-\`\`\`
-/api-project
-  /src
-    /controllers    # Route controllers
-    /models         # Mongoose models
-    /routes         # Express routes
-    /middleware     # Custom middleware
-    /services       # Business logic
-    /utils          # Utility functions
-    /config         # Configuration files
-    app.ts          # Express app setup
-    server.ts       # Server entry point
-  .env              # Environment variables
-  package.json
-  tsconfig.json
-\`\`\`
-
-## Connecting to MongoDB
-
-Create a database connection using Mongoose:
-
-\`\`\`typescript
-// src/config/database.ts
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-
-dotenv.config();
-
-const connectDB = async (): Promise<void> => {
-  try {
-    await mongoose.connect(process.env.MONGODB_URI as string);
-    console.log('MongoDB connected');
-  } catch (error) {
-    console.error('MongoDB connection error:', error);
-    process.exit(1);
-  }
-};
-
-export default connectDB;
-\`\`\`
-
-## Creating Models
-
-Define your data models using Mongoose schemas:
-
-\`\`\`typescript
-// src/models/User.ts
-import mongoose, { Document, Schema } from 'mongoose';
-import bcrypt from 'bcrypt';
-
-export interface IUser extends Document {
-  name: string;
-  email: string;
-  password: string;
-  comparePassword(candidatePassword: string): Promise<boolean>;
-}
-
-const UserSchema = new Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
-}, { timestamps: true });
-
-// Hash password before saving
-UserSchema.pre('save', async function(next) {
-  if (!this.isModified('password')) return next();
-
-  try {
-    const salt = await bcrypt.genSalt(10);
-    this.password = await bcrypt.hash(this.password, salt);
-    next();
-  } catch (error) {
-    next(error as Error);
-  }
-});
-
-// Method to compare passwords
-UserSchema.methods.comparePassword = async function(candidatePassword: string): Promise<boolean> {
-  return bcrypt.compare(candidatePassword, this.password);
-};
-
-export default mongoose.model<IUser>('User', UserSchema);
-\`\`\`
-
-## Setting Up Routes and Controllers
-
-Organize your API endpoints with routes and controllers:
-
-\`\`\`typescript
-// src/controllers/userController.ts
-import { Request, Response } from 'express';
-import User from '../models/User';
-
-export const getUsers = async (req: Request, res: Response): Promise<void> => {
-  try {
-    const users = await User.find().select('-password');
-    res.status(200).json(users);
-  } catch (error) {
-    res.status(500).json({ message: 'Server error', error });
-  }
-};
-
-export const getUserById = async (req: Request, res: Response): Promise<void> => {
-  try {
-    const user = await User.findById(req.params.id).select('-password');
-
-    if (!user) {
-      res.status(404).json({ message: 'User not found' });
-      return;
-    }
-
-    res.status(200).json(user);
-  } catch (error) {
-    res.status(500).json({ message: 'Server error', error });
-  }
-};
-
-// More controller methods...
-\`\`\`
-
-\`\`\`typescript
-// src/routes/userRoutes.ts
-import express from 'express';
-import { getUsers, getUserById } from '../controllers/userController';
-import { authMiddleware } from '../middleware/auth';
-
-const router = express.Router();
-
-router.get('/', authMiddleware, getUsers);
-router.get('/:id', authMiddleware, getUserById);
-
-export default router;
-\`\`\`
-
-## Error Handling
-
-Implement centralized error handling:
-
-\`\`\`typescript
-// src/middleware/errorHandler.ts
-import { Request, Response, NextFunction } from 'express';
-
-export const errorHandler = (
-  err: Error,
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  console.error(err.stack);
-
-  res.status(500).json({
-    message: 'Something went wrong',
-    error: process.env.NODE_ENV === 'production' ? {} : err
-  });
-};
-\`\`\`
-
-## Putting It All Together
-
-\`\`\`typescript
-// src/app.ts
-import express from 'express';
-import cors from 'cors';
-import helmet from 'helmet';
-import morgan from 'morgan';
-import userRoutes from './routes/userRoutes';
-import { errorHandler } from './middleware/errorHandler';
-
-const app = express();
-
-// Middleware
-app.use(cors());
-app.use(helmet());
-app.use(morgan('dev'));
-app.use(express.json());
-
-// Routes
-app.use('/api/users', userRoutes);
-
-// Error handling
-app.use(errorHandler);
-
-export default app;
-\`\`\`
-
-\`\`\`typescript
-// src/server.ts
-import app from './app';
-import connectDB from './config/database';
-import dotenv from 'dotenv';
-
-dotenv.config();
-
-const PORT = process.env.PORT || 5000;
-
-// Connect to database
-connectDB();
-
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-\`\`\`
-
-## Conclusion
-
-You now have a solid foundation for a Node.js REST API with Express and MongoDB. This architecture is scalable, maintainable, and follows best practices for production applications. As you expand your API, continue to focus on error handling, validation, authentication, and testing to ensure reliability and security.
-    `,
-    tags: ["Node.js", "Express", "MongoDB", "API", "Backend"],
-    coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=630&fit=crop&q=80",
-    readingTime: "12 min read"
   },
   {
     id: 4,
