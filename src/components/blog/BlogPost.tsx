@@ -12,6 +12,7 @@ import ReactMarkdown, { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nord } from "react-syntax-highlighter/dist/esm/styles/prism";
+import type { PrismTheme } from "react-syntax-highlighter";
 
 interface BlogPostProps {
   post: BlogPostType;
@@ -85,7 +86,7 @@ export function BlogPost({ post }: BlogPostProps) {
                     const match = /language-(\w+)/.exec(className || "");
                     return match ? (
                       <SyntaxHighlighter
-                        style={nord}
+                        style={nord as PrismTheme}
                         language={match[1]}
                         PreTag="div"
                         {...props}
