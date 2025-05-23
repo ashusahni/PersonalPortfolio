@@ -25,7 +25,7 @@ export const timelineData: TimelineItemType[] = [
     highlights: [
       'Led a team of 5 developers to rebuild the company\'s flagship product, resulting in 40% faster load times and improved customer satisfaction',
       'Architected and implemented a microservices infrastructure that improved system reliability by 99.9%',
-      'Introduced automated testing practices that reduced regression bugs by 70%',
+      'Introduced automated testing practices that  regression bugs by 70%',
       'Mentored junior developers and established code review and documentation standards'
     ]
   },
