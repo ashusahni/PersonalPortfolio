@@ -14,7 +14,7 @@ export const projects: Project[] = [
     title: "E-commerce Platform",
     description: "A modern e-commerce platform built with Next.js and a headless CMS. Features include product filtering, user authentication, and shopping cart functionality.",
     image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000&auto=format&fit=crop",
-    tags: ["Next.js", "React", "Stripe", "Tailwind CSS", "Prisma"],
+    tags: ["Next.js", "React", "Stripe", "Tailwind CSS", "Prisma","ts"],
     github: "https://github.com",
     demo: "https://demo.com",
     caseStudy: "/projects/ecommerce-platform-redesign",
