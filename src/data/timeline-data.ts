@@ -43,7 +43,7 @@ export const timelineData: TimelineItemType[] = [
       'Built and deployed over 15 client web applications with complex requirements',
       'Designed and implemented RESTful APIs and GraphQL endpoints for mobile and web clients',
       'Optimized database queries and implemented caching strategies reducing response times by 60%',
-      'Collaborated closely with UI/UX designers to deliver pixel-perfect implementations'
+      'Collaborated  with UI/UX designers to deliver pixel-perfect implementations'
     ]
   },
   {
