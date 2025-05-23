@@ -46,7 +46,7 @@ export const caseStudies: CaseStudyType[] = [
       "Created a dynamic filtering system with Elasticsearch integration for fast product searches",
       "Redesigned the checkout flow, reducing steps from 5 to 3 and implementing address auto-complete",
       "Built a fully responsive design system with Tailwind CSS for consistent UI across all devices",
-      "Added product recommendation engine using machine learning algorithms"
+      "Added product recommendation engine  machine learning algorithms"
     ],
     technologies: [
       "Next.js", "React", "Tailwind CSS", "TypeScript", "Elasticsearch", "Redux Toolkit", "Stripe API", "Jest"
