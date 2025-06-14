@@ -240,7 +240,7 @@ export default function ContactSection() {
 
                 {formStatus === 'success' && (
                   <p className="text-green-600 dark:text-green-400 text-sm text-center">
-                    Thanks for reaching out! I'll get back to you soon.
+                    Thanks for reaching out! I'll get back to you soon..
                   </p>
                 )}
 
