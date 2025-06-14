@@ -161,7 +161,7 @@ export default function ProjectCard({
                 aria-label={`Read case study for ${title}`}
               >
                 <IconBook size={16} aria-hidden="true" />
-                Case Study
+                Case Study!
               </Link>
             </Button>
           )}
