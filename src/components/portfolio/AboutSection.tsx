@@ -49,7 +49,7 @@ export default function AboutSection() {
               <span className="absolute -bottom-2 left-0 w-12 h-1 bg-primary"></span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              I'm a passionate fullstack developer with experience building modern web applications with React, Next.js, Node.js, and more. I'm dedicated to creating elegant, user-friendly solutions that solve real-world problems.
+              I'm a passionate fullstack developer with experience building modern web applications with React, Next.js, Node.js, Hono, and more. I'm dedicated to creating elegant, user-friendly solutions that solve real-world problems.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
               With a strong background in both frontend and backend development, I bridge the gap between stunning visual interfaces and robust, scalable backends. I'm constantly learning and exploring new technologies to stay at the cutting edge of fullstack development.
