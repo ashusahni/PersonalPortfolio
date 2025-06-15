@@ -19,7 +19,7 @@ export function BlogHero() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">Blog</span> & Technical Articles
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Dive into topics on fullstack development, modern web technologies, and software engineering best practices
+            Dive into topics on fullstack development, modern web technologies, and software engineering best practices.
           </p>
         </motion.div>
       </div>
