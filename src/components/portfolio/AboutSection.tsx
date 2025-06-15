@@ -52,7 +52,7 @@ export default function AboutSection() {
               I'm a passionate fullstack developer with experience building modern web applications with React, Next.js, Node.js, and more. I'm dedicated to creating elegant, user-friendly solutions that solve real-world problems.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              With a strong background in both frontend and backend development, I bridge the gap between stunning visual interfaces and robust, scalable backends. I'm constantly learning and exploring new technologies to stay at the cutting edge of web development.
+              With a strong background in both frontend and backend development, I bridge the gap between stunning visual interfaces and robust, scalable backends. I'm constantly learning and exploring new technologies to stay at the cutting edge of fullstack development.
             </p>
             <p className="text-lg text-muted-foreground">
               When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through blog posts and technical talks.
